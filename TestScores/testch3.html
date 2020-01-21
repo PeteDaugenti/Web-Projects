@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test Scores Array</title>
+        <script>
+            var entry;
+            var average;
+            var scores = [];
+            var total = 0;
+            var show = "The test scores:\n ";
+            
+            // use a do-while loop to put the scores in an array
+            do{
+                entry = prompt("Enter the scores\n" + "Or enter 999 to end entries", 999);
+                entry = parseInt(entry);
+                if(entry >= 0 && entry<= 100){
+                    scores[scores.length] = entry;
+                }else if(entry != 999){
+                    alert("Entry must be a valid number from 0 to 100\n" + "Or enter 999 to end entries");
+                }
+            }
+            while(entry != 999);
+            if(scores.length !=0){
+                // use a for loop to process the scores
+                for(var i = 0; i < scores.length; i++){
+                    total = total + scores[i];  // both are numbers so adds
+                    show = show + scores[i] + "\n"; // strings & number
+                                                    // so concatenates
+                }
+                //calculate the avaerage display
+                average = parseInt(total/scores.length);
+                alert(show + "\nAverage score is " + average);
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write("<h1>Test Scores Application</h1>");
+            document.write("<h2>The purpose of this app is to show how to use arrays and do...while loops</h2>");
+            document.write(show + "\n");
+            document.write("<br>");
+            document.write("\nAverage score is: " +average);
+        </script>
+    </body>
+</html>
