@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form Test</title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>Form Example</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">Sign-up</a></li>
+                        <li><a href="#">Sign-in</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div id="wrapper">
+            <main>
+                <script>
+                    document.write("<h2>Please Log In</h2>");
+                </script>
+                <form method="post" action="form_processor.php">
+                    <!--Labels are currently used for form; consider placeholder -->
+                    <label for="myName">
+                        Username:
+                    </label>
+                    <input type="text" id="myName" name="myName" required><br>
+                    <label for="myPass">
+                        Password:
+                    </label>
+                    <input type="password" id="myPass" name="myPass"  required><br>
+                    <div id="box">
+                        <input type="checkbox" id="check" name="check" value="Save Login">
+                        <label for="check"><small>Save Login</small></label>
+                    </div>
+                    <button type="submit" id="submit" value="Login">Login</button>
+                </form>
+                <script>
+                    //username variable will be used to store information
+                    //the user inputs; the "value" property represents the 
+                    //contents of the text box
+                    var username = document.getElementById("myName").value;
+                    //focus method will place cursor in called text box
+                    //references starting point
+                    document.getElementById("myName").focus();
+                </script>
+            </main>
+        </div>
+        <footer>PeteDaugenti</footer>
+    </body>
+</html>

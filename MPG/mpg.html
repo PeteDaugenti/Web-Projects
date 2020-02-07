@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MPG JS Application</title>
+        <script>
+            "use strict";
+            var $ = function(id){
+                return document.getElementById(id);
+            };
+            var calculateMpg = function(miles, gallons){
+                //This function calculates miles per gallon
+                var mpg = (miles/gallons);
+                mpg = mpg.toFixed(1);
+                //toFixed returns a number that does not use
+                //exponential notation; the parameter determines how 
+                //many places after the decimal the numbers will continue
+                return mpg;
+            };
+            var processEntries = function(){
+                //The variables below store the value input by the user
+                var miles = parseFloat($("miles").value);
+                var gallons = parseFloat($("gallons").value);
+                //A statement that provides the user with an 
+                // error message stating that their entries should
+                //contain numeric values or be greater than zero.
+                if(isNaN(miles) || isNaN(gallons)){
+                    alert("Both entries must be numeric");
+                }
+                else if(miles <= 0 || gallons <= 0){
+                    alert("Entries must be greater than zero");
+                }
+                else{
+                    //the output for the MPG text box.  
+                    $("mpg").value = calculateMpg(miles, gallons);
+                }
+            };
+            window.onload = function(){
+                $("calculate").onclick = processEntries;
+                $("mpg").focus();
+            }
+            document.write("<h1>Calculate Miles Per Gallon App</h1>");
+        </script>
+    </head>
+    <body>
+        <main>
+            <form>
+                <label for ="miles">Miles:</label>
+                <input type="text" id="miles"><br>
+                <label for ="gallons">Gallons:</label>
+                <input type="text" id="gallons"><br>
+                <label for="mpg">MPG:</label>
+                <input type="text" id="mpg" disabled><br>
+                <label>&nbsp;</label>
+                <input type="button" id="calculate" value="Calculate MPG"><br>
+                <button type="reset" value="reset">Clear Entries</button>
+            </form>
+        </main>
+    </body>
+</html>

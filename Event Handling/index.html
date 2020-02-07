@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Event Handling Example</title>
+        <script>
+            document.write("<h1>Please join our email list</h1>");
+            var $ = function(id){
+                return document.getElementById(id);
+                //this is used so that we can omit the
+                //document.getElementById() statement below
+            };
+            var joinList = function(){
+                alert("The joinList function is being run.");
+                //function that will be used for joinList click event
+            };
+            var changeValue = function(){
+                alert("the changeValue function is being run.");
+            };
+            window.onload = function(){
+                //creates the click event for the joinList button;
+                //the event includes the joinList function which
+                //displays an alert on the page
+                $("join_list").onclick = joinList;
+                $("myEmail").onchange = changeValue;
+            };
+        </script>
+    </head>
+    <body>
+        <label for="email">Email Address:</label>
+        <input type="email" id="myEmail" name="myEmail"><br>
+        <label>&nbsp;</label>
+        <!--This button will contain the click event for joinList
+        which will display an alert message coded above-->
+        <input type="button" id="join_list" value="Join our List"><br>
+    </body>
+</html>

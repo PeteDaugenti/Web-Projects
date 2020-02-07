@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Final Question</title>
+        <script>
+            var $=function(id){
+                return document.getElementById(id);
+            };
+            function displayFullName(){
+                var fname = $('fname').value;
+                var lname = $('lname').value;
+                var fullName = fname +" "+ lname;
+                if(isNaN(fullName)){
+                    $('fullName').value = fullName;
+                }
+            }
+            window.onload = function(){
+                $('goButton').onclick = displayFullName;
+                $('fname').focus();
+            };
+        </script>
+    </head>
+    <body>
+        <label>First Name</label><input type="text" id="fname" name="fname">
+        <label>Last Name</label><input type="text" id="lname" name="lname">
+        <input type="button" id="goButton" value="submit">
+        <input type="text" id="fullName" disabled>
+    </body>
+</html>
