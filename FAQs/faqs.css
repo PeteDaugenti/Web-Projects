@@ -1,0 +1,15 @@
+a{
+    color:#000;text-decoration:none;
+}
+a:focus, a:hover{
+    color:blue;
+}
+h2{
+    cursor:pointer;
+}
+div{
+    display:none;
+}
+div.open{
+    display:block;
+}
