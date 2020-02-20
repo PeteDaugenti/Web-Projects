@@ -23,6 +23,28 @@ var toggle = function(){
     }
 };
 
+// declare a variable to hold the reference to the timer; make it 
+//global so all of the functions can access it
+var timer;
+
+var startUpgrade = function(){
+    $("cancel").setAttribute("class", "hidden");
+    $("message").firstChild.nodeValue = "Download starting...";
+
+    // code to perform upgrade goes here***
+
+    $("upgrade").setAttribute("class", "hidden");
+};
+
+// the clearTimeout() method will stop the timer that's started by the setTimeout() method
+var cancelUpgrade = function(){
+    clearTimeout(timer);
+    $("upgrade").setAttribute("class", "hidden");
+};
+
+// window onload function contains the toggle for the h2 elements in the faqs and 
+// contains the method that calls startUpgrade() function with the amount of time to 
+// wait before the function is called.
 window.onload = function(){
     //get the h2 tags
     var faqs = $("faqs");
@@ -32,6 +54,13 @@ window.onload = function(){
     for (var i = 0; i < h2Elements.length; i++){
         h2Elements[i].onclick = toggle;
     }
+
+    // the code below contains the global setTimout() method with parameters 
+    // that call the function that the timer calls (startUpgrade) and the amount of 
+    // time to wait before calling the function
+    timer = setTimeout(startUpgrade, 5000);
+    $("cancel").onclick = cancelUpgrade;
+
     // set focus on first h2 tag's <a> tag
     h2Elements[0].firstChild.focus();
 };

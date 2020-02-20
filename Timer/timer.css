@@ -1,10 +1,10 @@
-body{
-    font-family:verdana sans;
+main{
+    font-family:Arial;
 }
 a{
     color:#000;text-decoration:none;
 }
-a:focus, a:hover{
+a:hover{
     color:blue;
 }
 h2{
@@ -15,7 +15,4 @@ div{
 }
 div.open{
     display:block;
-}
-.hidden{
-    display:none; 
 }
