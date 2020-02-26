@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JQuery FAQs</title>
+        <link rel="stylesheet" href="faqs.css">
+        <script src="jquery-3.4.1.js"></script>
+        <script>
+
+            $(document).ready(function() {
+                $("#faqs h2").click(function(){
+                    $(this).toggleClass("minus");
+                    if($(this).attr("class") != "minus"){
+                        $(this).next().hide();
+                    }else{
+                        $(this).next().show();
+                    }
+                }); // end click event
+
+                // quick click event action
+                $("h3").click(function(){
+                    alert("To use JQuery, find the download on the web page: JQuery.com");
+                });
+
+            }); // end ready
+
+        </script>
+    </head>
+    <main id="faqs">
+        <h1>JQuery FAQs</h1>
+        <h2><a href="#">What is JQuery?</a></h2>
+        <div>
+            <p>JQuery is a simplified JavaScript library that makes it easier to code using
+                JavaScript methods, selectors, event methods, etc. using less lines of code.  It is 
+                used in most of the millions of web pages visted each day, and is becoming common 
+                and popular to use by professional web developers. 
+            </p>
+        </div>
+        <h2><a href="#">Why is JQuery becoming so popular?</a></h2>
+        <div>
+            <p>Three reasons:
+                <ul>
+                    <li>It's free.</li>
+                    <li>It let's you get more done in less time.</li>
+                    <li>All of its functions are cross-browser compatible.</li>
+                </ul>
+            </p>
+        </div>
+        <h2><a href="#">Which is harder to learn: JavaScript or JQuery?</a></h2>
+        <div>
+            <p>This is a complicated question to answer given that any programming language for 
+                first time users will be complex in their own way, meaning that either way it will 
+                be tough in the beginning.  Having said that, it would be easier to learn JavaScript 
+                first due to JQuery being a library of JS methods.  It would make the learning 
+                process much more simplistic knowing what is what in the programming language.  
+            </p>
+        </div>
+        
+        <h3><a href="#">Click here to find out more information.</a></h3>
+    </main>
+</html>
