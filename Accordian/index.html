@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Accordian Menu</title>
+        <script src="https://kit.fontawesome.com/ad3264a647.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="accordian.css">
+        <script>
+            $(document).ready(function(){
+                $(".sidebar_menu li").click(function(){
+                    $(".sidebar_menu li").removeClass("active");
+                    $(this).addClass("active");
+                })
+
+                $(".hamburger").click(function(){
+                    $(".wrapper").addClass("active");
+                })
+
+                $(".close .bg_shadow").click(function(){
+                    $(".wrapper").removeClass("active");
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="bg_shadow"></div>
+                <div class="sidebar_inner">
+                    <div class="close">
+                        <i class="fas fa-times"></i>        <!-- close icon -->
+                    </div>
+
+                    <div class="profile_info">
+                        <div class="profile_img">
+                            <img src="circle.png" alt="photo">
+                        </div>
+                        <div class="profile_data">
+                            <p class="name">Name</p>
+                            <span><i class="fas fa-map-marker-alt"></i> Cleveland, Ohio</span>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar_menu">
+                        <li class="active">
+                            <a href="#">
+                                <div class="icon"><i class="fas fa-heart"></i></div>
+                                <div class="title">Favorites</div>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <div class="icon"><i class="fas fa-user-circle"></i></div>
+                                <div class="title">Account Details</div>
+                                <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+                            </a>
+                            <ul class="accordion">
+                                <li><a href="#" class="active">Account Details 1</a></li>
+                                <li><a href="#">Account Details 2</a></li>
+                                <li><a href="#">Account Details 3</a></li>
+                                <li><a href="#">Account Details 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <div class="icon"><i class="fas fa-receipt"></i></div>
+                                <div class="title">Previous Orders</div>
+                                <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+                            </a>
+                            <ul class="accordion">
+                                <li><a href="#" class="active">Orders 1</a></li>
+                                <li><a href="#">Orders 2</a></li>
+                                <li><a href="#">Orders 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <div class="icon"><i class="fas fa-credit-card"></i></div>
+                                <div class="title">Payment Details</div>
+                                <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+                            </a>
+                            <ul class="accordion">
+                                <li><a href="#" class="active">Details 1</a></li>
+                                <li><a href="#">Details 2</a></li>
+                                <li><a href="#">Details 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="#">
+                                <div class="icon"><i class="fas fa-lock"></i></div>
+                                <div class="title">Change Password</div>
+                            </a>
+                        </li>
+                        <div class="logout_btn">
+                            <a href="#" class="btn">Logout</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_container">
+                <div class="navbar">
+                    <div class="hamburger">
+                            <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="logo">
+                        <a href="#">Coding Market</a>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="items">
+                        This page is a test of the accordian style sidebar commonly used with social media 
+                        pages, mobile versions of sites that use non-personal information input by the user, 
+                        and any site where the user manages payment information.    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

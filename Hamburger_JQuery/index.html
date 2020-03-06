@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Transform Hamburger Menu</title>
+        <style>
+            #wrapper{
+                background-color:#0d6fba;display:inline-block;
+                border-radius:500px;margin:10px;position:relative;
+                padding:50px;cursor:pointer;
+                /* circle properties kept separate in a div wrapper */
+
+            }
+            .circle{
+                width:100px;height:100px;position:relative;
+                /* circle sizing */
+            }
+            .line{
+                position:absolute;height:12px;width:100%;
+                background-color:#fff;border-radius:8px;
+
+                /* transform property of the lines to X with quick speed; change speed to 
+                allow for a slower transition or a faster transition*/
+                transition:all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+            }
+
+            /* below are positions of where the lines will be for the hamburger menu*/
+            .top{
+                top:18%;
+            }
+            .mid{
+                top:48%;
+            }
+            .bot{
+                top:78%;
+            }
+
+            .icon.close .top{
+                /* how lines will rotate in order to form the X; top line rotates 45 degrees*/
+                transform:rotate(45deg);top:48%;
+            }
+            .icon.close .mid, .icon.close .bot{
+                /* how lines will rotate in order to form the X; lines mid and bot are rotated
+                 -45 deg which rotates in reverse compared to line top.*/
+                transform:rotate(-45deg);top:48%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="circle icon">
+                <span class="line top"></span>
+                <span class="line mid"></span>
+                <span class="line bot"></span>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+
+            $("#wrapper").click(function(){
+                $(".icon").toggleClass("close");
+            });
+
+        </script>
+
+    </body>
+</html>
