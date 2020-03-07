@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+body{
+    background:#eedfcc;
+    color:#555;
+    font-size:14px;
+}
+
+.wrapper{
+    margin:20px 0;width:100%;
+}
+
+.wrapper .cards_wrap{
+    display:flex;flex-wrap:wrap;    /* flex allows the cards to be placed inline */
+}
+
+.cards_wrap .card_item{
+    width:25%;padding:10px;     /* padding limits the width of text */
+}
+
+.cards_wrap .card_inner{
+    background:#fff;    /* inside of each card */
+}
+
+.cards_wrap .card_top{
+    width:100%;height:auto;
+    padding:10px;padding-bottom:0;  /* if card has graphic on top **** */
+}
+
+.cards_wrap .card_bottom{
+    padding:15px;
+}
+
+.cards_wrap .card_bottom .card_category{
+    text-transform:uppercase;
+    text-align:center;              /* card header text ("TRAVEL") */
+}
+.cards_wrap .card_bottom .card_info{
+    padding:15px;margin:10px 0;
+    border: 1px dashed #0071bc;     /* info inside of card (description) */
+}
+
+.cards_wrap .card_bottom .card_info .title{
+    color:#0071bc;font-size:18px;
+    margin-bottom:5px;          /* title of info within card_info section */
+}
+
+@media (max-width:1024px){
+    .cards_wrap .card_item{
+        width:33%;
+    }
+}
+
+@media (max-width:768px){
+    .cards_wrap .card_item{
+        width:50%;
+    }
+}
+
+@media (max-width:528px){
+    .cards_wrap .card_item{
+        width:100%;
+    }
+}
+
+

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+    outline:none;font-family:Lora, sans-erif;
+    letter-spacing:1px;
+}
+
+.wrapper{
+    position:absolute;top:50%;
+    transform:translateY(-50%);
+    width:100%;padding:0 20px;
+}
+
+.contact_form{
+    max-width:550px;margin:0 auto;      /* places form horizontally in center of page */
+    background:rgba(0, 0, 0, 0.8);   /* this rgba gives a transparent background */
+    padding:30px;border-radius:5px;    /* border-radius for curved corners of form */
+    display:flex;                     /* places form in flex container */
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.13);
+}
+
+.input_fields{
+    display:flex;
+    flex-direction:column;          /* places input fields into column structure */
+    margin-right:4%;                /* separates input fields to the right */
+}
+
+.input_fields, .msg{
+    width:48%;                      /* increases width of all input fields */
+}
+
+.input_fields .input, .msg textarea{
+    margin:10px 0;
+    background:transparent;border:0;         /* gives all input fields a transparent background */
+    border-bottom:2px solid #c5ecfd;      /* border at bottom of input field more visible*/
+    padding:10px;color:#c5ecfd;           /* remove border using border:0; */
+    width:100%;
+}
+
+.msg textarea{
+    height:212px;
+}
+
+::-webkit-input-placeholder{
+    color:#c5ecfd;
+}
+
+::-moz-input-placeholder{
+    color:#c5ecfd;
+}
+
+::-ms-input-placeholder{
+    color:#c5ecfd;
+}
+
+.btn{
+    background:#39b7dd;
+    text-align:center;
+    padding:15px;
+    border-radius:5px;
+    color:#fff;
+    cursor:pointer;
+    text-transform:uppercase;
+}
+
+@media screen and (max-width:600px){
+    .contact_form{
+        flex-direction:column;      /* places inputs in columns for smaller devices */
+    }
+
+    .msg textarea{
+        height:80px;
+    }
+
+    .input_fields, .msg{
+        width:100%;
+    }
+}

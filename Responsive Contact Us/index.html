@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Responsive Contact Us Form</title>
+        <link rel="stylesheet" href="contact.css">
+        <script>
+            var $ = function(id){
+                return document.getElementById(id);
+            };
+
+            window.onload = function(){
+                $("i1").focus();
+            };
+        </script>
+    </head>
+    <body>
+
+        <!--Quick form example using div containers to separate important elements-->
+        <!--All input types are assigned to the correct category-->
+        <!--Media query included in css (contact.css)-->
+        <!--Focus method used as only functionality for form-->
+        <div class="wrapper">
+            <div class="contact_form">
+                <div class="input_fields">
+                    <input type="text" id="i1" class="input" placeholder="Name">
+                    <input type="email" class="input" placeholder="Email Address">
+                    <input type="tel" class="input" placeholder="Phone">
+                    <input type="text" class="input" placeholder="Subject">
+                </div>
+                <div class="msg">
+                    <textarea placeholder="Message"></textarea>
+                    <div class="btn">Send</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
