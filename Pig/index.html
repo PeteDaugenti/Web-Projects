@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pig Game</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="pig.js"></script>
+        <style>
+            *{
+                font-family:arial;
+            }
+            input{
+                margin-right:10px;
+            }
+            #p1, #p2, #sc1, #sc2, #dice, #total{
+                width:85px;
+            }
+            section{
+                display:none;          /* display is set to none until */
+            }
+            .open{
+                display:block;          /* open class will display the "turn" section using JS */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Let's Play PIG!</h1>
+        <fieldset>
+            <legend>Rules</legend>
+            <ul>
+                <li>First player to 100 wins</li>
+                <li>Players take turns rolling the die</li>
+                <li>Turn ends when player rolls a 1 or chooses to hold</li>
+                <li>If player rolls a 1, they lose all points earned during the turn</li>
+                <li>If the player holds, points earned during the turn are added to their total</li>
+            </ul>
+        </fieldset><br>
+        <br>
+        <label for="player">Player 1</label>
+        <input type="text" id="p1">
+        <label for="sc1">Score</label>
+        <input type="text" id="sc1" disabled><br>
+        <br>
+
+        <label for="player">Player 2</label>
+        <input type="text" id="p2">
+        <label for="sc2">Score</label>
+        <input type="text" id="sc2" disabled>
+        <input type="button" id="new_game" value="New Game"><br>
+        <br>
+
+        <section id="turn">
+            <p><span id="current">&nbsp;</span>'s turn</p>
+            <input type="button" id="roll" value="Roll">
+            <input type="button" id="hold" value="Hold">
+            <label for="dice">Dice</label>
+            <input type="text" id="dice" disabled>
+            <label for="total">Total</label>
+            <input type="text" id="total" disabled>
+        </section>
+    </body>
+</html>

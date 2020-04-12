@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery Form</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#member_form").submit(function(event){
+                    var isValid = true;
+
+                    // validate the email entry with a regular expression
+                    // emailPattern variable checks for valid characters in email address
+                    // emailPattern variable will be used for regular email and email confirmation
+                    var emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b/;
+                    var email = $("#emailAddress").val();
+                    var zip = $("#zipCode").val();
+                    var zipPattern = /^([0-9]{5})(?:[-/s]*([0-9]{4}))?$/;       //common pattern for zipcode; is interchangable between 5 and 9 digit zip codes
+                    if(email == ""){
+                        $("#emailAddress").next().text("This field is required.");
+                        isValid = false;
+                    }else if (!emailPattern.test(email)){
+                        $("#emailAddress").next().text("Must be a valid email address.");
+                    }else{
+                        $("#emailAddress").next().text("");
+                    }
+                    $("#emailAddress").val(email);
+
+                    // validate email confirmation
+                    var email2 = $("#confirmEmail").val();
+                    if(email2 == ""){
+                        $("#confirmEmail").next().text("This field is required");
+                        isValid = false;
+                    }else if (!emailPattern.test(email2)){
+                        $("#confirmEmail").next().text("Must be a valid email address.");
+                    }else{
+                        $("#confirmEmail").next().text("");
+                    }
+                    $("#confirmEmail").val(email2);
+                    if(email != email2){
+                        $("#error").text("Email must match");
+                    }else{
+                        $("#error").text("");
+                    }
+
+                    if(zip == ""){
+                        $("#zipCode").next().text("Field is required.");
+                        isValid = false;
+                    }else if (!zipPattern.test(zip)){
+                        $("#zipCode").next().text("Must be a valid zip code.");
+                    }else{
+                        $("zipCode").next().text("");
+                    }
+
+
+                    // prevent the submission of the form if any entries are invalid
+                    if(isValid == false) {event.preventDefault();}
+                })
+                $("#submit").click(function(){
+                    $(this).submit();
+                })
+            });
+        </script>
+        <style>
+            *{
+                margin:0;padding:0;
+                box-sizing:border-box;
+            }
+            h1{
+                padding-left:15px;
+                padding-bottom:25px;
+            }
+            form{
+                padding-left:15px;
+            }
+            label{
+                padding-bottom:5px;
+                
+            }
+            input{
+                margin-bottom:5px;
+                
+            }
+            #books{
+                margin-left:15px;
+            }
+            #submit, #reset{
+                margin-right:10px;
+                margin-left:10px;
+                margin-top:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Please Join Our Email List</h1>
+        <h2 id="error"></h2>
+        <form action="#" method="post" name="member_form" id="member_form">
+            <label for="email">Email Address:</label>
+            <input type="email" id="emailAddress"><span>*</span><br>
+            <label for="confirm_email">Re-enter Email Address:</label>
+            <input type="email" id="confirmEmail"><span>*</span><br>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fName"><span>*</span><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lName"><span>*</span><br>
+            <label for="state">State:</label>
+            <input type="text" id="state"><span>*</span><br>
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zipCode"><span>*</span><br>
+            <label for="chkbx">Email me about:</label>
+            <input type="checkbox" id="books" value="Web Books">Web Books
+            <input type="checkbox" id="books" value="Java Books">Java Books
+            <input type="checkbox" id="books" value="NET Books">NET Books<br>
+            <input type="submit" id="submit" value="Join Our List">
+            <input type="reset" id="reset" value="Reset">
+        </form>
+    </body>
+</html>

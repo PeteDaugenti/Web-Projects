@@ -1,0 +1,68 @@
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+    letter-spacing:1px;
+}
+
+.header{
+    background-color:#555;
+    margin-bottom:20px;
+}
+
+.header h1{
+    color:#fff;
+    line-height:65px;
+    text-align:center;
+    letter-spacing:1px;
+}
+
+.weather{
+    margin:25px;
+}
+
+.clouds{
+    display:none;
+}
+
+.rain{
+    display:none;
+}
+
+
+.sun{
+    display:none;
+}
+
+.open{
+    display:inline;
+}
+
+.search{
+    position:absolute;
+    left:45%;
+    top:35%;
+}
+.search .searchBar{
+    height:30px;
+    border-radius:50px;
+    padding-left:5px;
+    outline:none;
+    letter-spacing:1px;
+}
+.btn{
+    height:40px;
+    width:40px;
+    border-radius:50px;
+    background-color:#555;
+    position:absolute;
+    left:56%;
+    top:34%;
+    cursor:pointer;
+}
+
+.btn .icon{
+    position:absolute;
+    left:22%;
+    top:30%;
+    color:#fff;
+}

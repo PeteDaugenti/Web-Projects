@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+    font-family:"Hind", sans-serif;
+    list-style:none;
+}
+
+body{
+    background:#f6f6f6;
+}
+
+.wrapper{
+    max-width:425px;
+    width:100%;
+    margin:60px auto;
+}
+
+.accordion_container{
+    width:100%;
+    height:550px;
+    background:#fff;
+    box-shadow:0 0 3px rgba(0, 0, 0, 0.125);
+}
+
+.accordion_container .accordion_header{
+    background:#f6434c;padding:35px 15px;
+    font-weight:bold;height:100px;
+    text-align:center;color:#fff;
+    font-size:26px;
+    box-shadow:0 2px 10px rgba(0, 0, 0, 0.125);
+    letter-spacing:1.5px;
+}
+
+.accordion_container .accordion_body{
+    padding:20px 25px;
+    height:calc(550px - 100px);
+    overflow:auto;              /* creates oveflow when parts of accordion are opened */
+}
+
+.accordion_body ul{
+    padding:0;
+}
+
+.accordion_body ul li{
+    border-bottom:1px solid #e0e0e0;        /* creates border below each list element; these will be opened*/
+    padding:0 25px;
+    margin-bottom:10px;height:60px;
+    transform:height 0.3s ease;
+    overflow:hidden;
+}
+
+.accordion_body ul li:last-child{
+    border-bottom:0;
+}
+
+.accordion_body ul li .li_qus{
+    color:#f6434c;
+    cursor:pointer;
+    height:60px;
+    display:flex;
+    justify-content:space-between;      /* pushes list item */
+    align-items:center;                 /* further positions the list elements to be centered*/
+}
+
+.accordion_body ul li .li_qus p{
+    width:250px;
+}
+
+.accordion_body ul li .li_qus .btn{
+    width:30px;height:30px;
+    border-radius:50%;                 /* transforms btn div element to appear more button-like */
+    background:#f6434c;
+    position:relative;
+}
+
+.accordion_body ul li .li_qus .btn:before,
+.accordion_body ul li .li_qus .btn:after{
+    content:"";
+    position:absolute;
+    top:14px;left:8px;
+    width:15px;height:2px;
+    background:#fff;
+}
+
+.accordion_body ul li .li_qus .btn:after{
+    transform:rotate(90deg);
+}
+
+.accordion_body ul li .li_ans{
+    padding:10px 0;
+    height:200px;
+    padding-left:40px;
+    font-size:14px;
+    line-height:21px;
+    transition:height 0.3s ease;
+}
+

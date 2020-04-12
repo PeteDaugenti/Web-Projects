@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Rain Clouds Clear -->
+        <title>Weather API</title>
+        <link rel="stylesheet" href="weather.css">
+        <script src="https://kit.fontawesome.com/ad3264a647.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btn").click(function(){
+                    var zip = $("#searchBar").val();
+                    var url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + ",us&appid=a9b04f2439dd450a7f39d31409bf82c5";
+
+                    $.ajax({
+                        type:"get",
+                        url:url,
+                        dataType:"json",
+                        data:{units:'imperial'},
+                        success:function(data){
+                            var html = "";
+                            var fullWeather = "";
+                            $.each(data.weather, function(i, item){
+                                html += "Condition: " + item.main 
+                                fullWeather += "<p>Temperature: " + data.main.temp + "&deg;F</p>"
+                                fullWeather += "<p>City: " + data.name + "</p>"
+                            });
+                            $("#condition").html(html);
+                            $("#fullWeather").html(fullWeather);  
+                            if(html == "Condition: Clouds"){
+                                $(".clouds").removeClass("clouds").addClass("open");
+                            }else if(html == "Condition: Rain"){
+                                $(".rain").removeClass("rain").addClass("open");
+                            }else if(html == "Condition: Clear"){
+                                $(".sun").removeClass("sun").addClass("open");
+                            }
+                        }
+                    })
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Weather API</h1>
+        </div>
+        <div id="weather" class="weather">
+            <div class="icon">
+                <div class="clouds">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <div class="rain">
+                    <i class="fas fa-cloud-showers-heavy"></i>
+                </div>
+                <div class="sun">
+                    <i class="fas fa-sun"></i>
+                </div>
+            </div>
+            <div id="condition" class="condition">
+                <p id="sky" class="sky"></p>
+            </div>
+            <div id="fullWeather"></div>
+        </div>
+        <div id="search" class="search">
+            <input type="search" id="searchBar" class="searchBar" placeholder="Enter zip code">
+        </div>
+        <div id="btn" class="btn">
+            <div class="icon">
+                <i class="fas fa-meteor fa-lg"></i>
+            </div>
+        </div>
+    </body>
+</html>

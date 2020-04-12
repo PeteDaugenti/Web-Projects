@@ -1,0 +1,68 @@
+*{
+    margin:0;padding:0;
+    user-select:none;
+}
+
+body{
+    background:#29313a;
+}
+
+.wrapper{
+    position:absolute;      /* with absolute the element can be placed*/
+    top:50%;left:50%;       /* anywhere on the page by positioning using top and left*/
+    transform:translate(-50%, -50%);       /* top pushes the element down; left pushes element right*/
+    /* using translate will help center the element */
+}
+
+.search_box{
+    width:450px;height:100px;
+    position:relative;
+}
+
+.input{
+    position:absolute;
+    top:20px;right:50px;        /* right property pushes input further into the btn element */
+    box-sizing:border-box;
+    width:0px;height:63px;      /* width property will be kept set at 0 for click event */
+    border:3px solid #62d474;   /* create a border around input */
+    border-radius:50px;     /* rounds out the sides of input */ 
+    padding:0 20px;         /* pushes placeholder and text away from input box edge */
+    outline:none;       /* removes any outline around input */
+    font-size:18px;color:#29313a;
+    transition:all 0.8s ease;       /* creates a smooth transition effect */
+}
+
+::-webkit-input-placeholder{
+    color:#62d474;
+}
+
+::-moz-input-placeholder{
+    color:#62d474;
+}
+
+::-ms-input-placeholder{
+    color:#62d474;
+}
+
+.btn{
+    position:absolute;
+    width:80px;height:80px;
+    background:#62d474;     /* give color to btn element */
+    border-radius:50%;        /* shape btn element to look more circular */
+    top:10px;right:45px;
+    cursor:pointer;          /* give element a link property */
+    text-align:center;      /* align icon */
+    line-height:80px;       /* further align icon to place in center of btn element*/
+    font-size:20x;color:#fff;
+    transition:all 0.8s ease;
+}
+
+.input.active{          /* class will activate when click event occurs */
+    width:350px;        /* search bar will appear when btn element is clicked */
+    right:65px;        /* right property causes search bar element to move right when btn element is clicked */
+}
+
+.btn.animate{                   /* this will activate when btn is clicked */
+    transform:rotate(-360deg);  /* causing search btn element to rotate graphic */
+    right:65px;                /* right property causes the btn element to move right when clicked */                            
+}                               /* rotate(-360deg) will cause the btn element to rotate to the left */

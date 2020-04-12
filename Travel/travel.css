@@ -1,0 +1,119 @@
+/* Font Styles */
+/* ----- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); /* font for name class */
+
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap'); /* font for title1, title2 */
+
+/* ----- */
+/* End Font Styles */
+
+
+/* Full Desktop View */
+/* ----- */
+
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+}
+
+.header{
+    background-color:#f0f8ff;
+    height:100px;
+}
+
+.name a{
+    font-family:"Lobster";
+    padding-top:15px;
+    position:absolute;
+    left:45%;
+    text-decoration:none;
+    letter-spacing:2px;
+    line-height:25px;
+    font-size:250%;
+    z-index:15;     /* used to keep anchor element usable */
+}
+
+/* Navigation Section */
+
+.nav{
+    padding-top:60px;
+    position:absolute;
+    left:20%;
+}
+.nav ul li{
+    list-style:none;
+    display:inline-block;
+    margin-left:75px;
+}
+.nav ul li a{
+    font-family:"Reem Kufi";
+    text-decoration:none;
+    letter-spacing:1px;
+    font-size:20px;
+}
+
+.nav ul li a:hover{
+    color:#b2b2ff;
+}
+
+.nav ul li a:active{
+    color:#b2b2ff;
+}
+
+/* Things to Do Drop Down */
+
+.nav ul li .TTD{
+    background-color:#f0f8ff;
+    position:absolute;
+    left:7%;
+    width:180px;
+    border-radius:10px;
+}
+.nav ul li .TTD li{
+    list-style:none;
+    display:block;
+    border-bottom:1px solid #b2b2ff;
+    margin:0;padding-left:15px;
+    padding-bottom:5px;
+    padding-top:5px;
+}
+.nav ul li .TTD .nav-item-sp{
+    border-bottom:none;
+}
+.nav ul li .TTD li a:hover{
+    color:#b2b2ff;
+}
+
+
+/* css for index.html */
+
+.homepage{
+    background-image:url("images/ohio_state_stadium2.jpg");
+    background-repeat:no-repeat;
+    background-size:1550px 900px;
+    height:900px;
+    
+}
+
+.title1{
+    font-size:38px;
+    position:absolute;
+    left:10%;
+    top:45%;
+}
+.title2{
+    margin-top:2px;
+    font-size:45px;
+    position:absolute;
+    left:15%;
+    top:50%;
+}
+.title1, .title2{
+    font-family:"Reem Kufi";
+    letter-spacing:2px;
+    color:#f0f8ff;
+}
+
+/* ----- */
+/* End Full Desktop View */

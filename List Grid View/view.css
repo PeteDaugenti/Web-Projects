@@ -1,0 +1,115 @@
+/* font styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    font-family:"Montserrat";
+    list-style:none;
+    margin:0;padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:#ebecf1;
+    color:#b3b9b9;
+}
+
+.wrapper{
+    width:800px;margin:50px auto;
+}
+
+.links{
+    margin-bottom:20px;
+    background-color:#fff;
+    padding:15px;
+    border-radius:3px;
+}
+
+.links ul{
+    display:flex;
+    justify-content:center;
+}
+
+.links ul li{
+    margin:0 15px;
+    font-weight:600;
+    text-transform:uppercase;
+    font-size:20px;
+    letter-spacing:3px;
+    cursor:pointer;
+}
+
+.links ul li:hover,
+.links ul li.active{
+    color:#4abd3e;
+}
+
+.view_main{
+    background:#fff;
+    border-radius:3px;
+    padding:15px;
+}
+
+.list-view .view-item{
+    border:1px solid #e2efe1;
+    margin:10px;
+    padding:10px 20px;
+    display:flex;
+    align-items:center;
+}
+
+.list-view .view-item:last-child{
+    margin-bottom:0;
+}
+
+.list-view .view-item .vi_left{
+    margin-right:25px;
+}
+
+.view-item .title{
+    font-weight:600;
+}
+
+.view-item .content{
+    margin:5px 0;
+    font-size:14px;
+    line-height:22px;
+    font-weight:200;
+}
+
+.view-item .btn{
+    width:125px;
+    background-color:#4abd3e;
+    color:#fff;
+    border-radius:3px;
+    padding:8px 5px;
+    text-align:center;
+    font-weight:200;
+    cursor:pointer;
+}
+
+.view-item .btn:hover{
+    background-color:#3bd62b;
+}
+
+/* Begin Grid View Styles */
+.grid-view{
+    width:100%;
+}
+
+.grid-view .view-item{
+    width:230px;
+    border:1px solid #e2efe1;
+    padding:25px;
+    text-align:center;
+    margin:10px;
+    display:inline-block;
+}
+
+.grid-view .view-item .vi_left{
+    margin-bottom:10px;
+}
+
+.grid-view .view-item .btn{
+    margin:0 auto;
+}

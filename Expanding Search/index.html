@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Animated Search Bar</title>
+        <link rel="stylesheet" href="search.css">
+        <script src="https://kit.fontawesome.com/ad3264a647.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            // click function below will activate css code giving the input field a width
+            // when btn element is clicked the search bar appears in a smooth transition
+            $(document).ready(function(){
+                $(".btn").click(function(){
+                    $(".input").toggleClass("active");
+                    $(this).toggleClass("animate");
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="search_box">
+                <input type="text" class="input" placeholder="Search">
+                <div class="btn">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
