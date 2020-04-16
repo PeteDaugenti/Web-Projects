@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tabs Using JavaScript</title>
+        <link rel="stylesheet" href="tabs.css">
+        <script src="https://kit.fontawesome.com/ad3264a647.js"></script>
+    </head>
+    <body>
+        
+        <div class="wrapper">
+
+            <!--Content Navigator-->
+            <div class="wrapper_left">
+                <ul>
+                    <li data-li="angular" class="active"> 
+                        <p>Angular</p>
+                    </li>
+                    <li data-li="node">
+                        <p>Node.js</p>
+                    </li>
+                    <li data-li="react">
+                        <p>React.js</p>
+                    </li>
+                    <li data-li="vue">
+                        <p>Vue.js</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Content-->
+            <div class="wrapper_right">
+                <div class="title">
+                    Top JavaScript Frameworks
+                </div>
+                <div class="container">
+                    <div class="item angular">
+                        <div class="item_info">
+                            <div class="img"></div>
+                            <p>Angular</p>
+                        </div>
+                        <p>Angular is a TypeScript-based open source web application framework 
+                            led by the Angular Team at Google and by a community of individuals 
+                            and corporations.  Angular is a complete rewrite from the same team 
+                            that built Angular JS.
+                        </p>
+                    </div>
+                    <div class="item node" style="display:none;">
+                        <div class="item_info">
+                            <div class="img"></div>
+                            <p>Node.js</p>
+                        </div>
+                        <p>Node.js is an open-source, cross-platform, JavaScript runtime 
+                            environment that executes JavaScript code outside of a web browser.  
+                            The original author is Ryan Dahl and its initial release was May 27, 
+                            2009, originally wirtten in C, C++, and JavaScript.
+                        </p>
+                    </div>
+                    <div class="item react" style="display:none;">
+                        <div class="item_info">
+                            <div class="img"></div>
+                            <p>React.js</p>
+                        </div>
+                        <p>React is a JavaScript library for building user interfaces.  It is 
+                            maintainted by Facebook and a community of individual developers and 
+                            companies.  React can be used as a base in the development of 
+                            single-page or mobile applications.
+                        </p>
+                    </div>
+                    <div class="item vue" style="display:none;">
+                        <div class="item_info">
+                            <div class="img"></div>
+                            <p>Vue.js</p>
+                        </div>
+                        <p>View.js is an open-source Model-view-viewmodel JavaScript 
+                            framework for building user interfaces and single-page 
+                            applications.  It was created by Even You, and is maintained 
+                            by him and the rest of the active core team members coming 
+                            from various companies such as Netlify and Netguru.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="tabs.js"></script>
+    </body>
+</html>

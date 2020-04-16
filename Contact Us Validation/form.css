@@ -1,0 +1,74 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@600&display=swap');
+/* onsubmit="return validation()"*/
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+    font-family:"Baloo Paaji 2";
+    outline:none;
+}
+
+body{
+    background-color:#f0ffff;
+}
+
+.wrapper{
+    max-width:350px;
+    width:100%;
+    background-color:#0e6fa2;
+    position:absolute;
+    left:50%;top:50%;
+    transform:translate(-50%, -50%);
+    padding:25px;
+    border-radius:5px;
+}
+
+.wrapper h2{
+    color:#fff;
+    text-align:center;
+    margin-bottom:20px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.wrapper .input_field{
+    margin-bottom:10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+    width:100%;
+    border:1px solid #e0e0e0;
+    padding:10px;               /* helps adjust height by increasing padding in all directions inside input field */
+}  
+
+.wrapper textarea{
+    height:80px;
+    resize:none;                /* removes resizing draggin resizing option from lower right corner */
+}
+
+.wrapper .btn input[type="submit"]{
+    border:0;
+    margin-top:15px;
+    padding:10px;
+    width:100%;
+    background-color:#f0ffff;
+    cursor:pointer;
+    color:#332902;
+    text-transform:uppercase;
+    letter-spacing:5px;
+    border-radius:25px;
+    font-weight:bold;
+}
+.wrapper .btn input[type="submit"]:hover{
+    background-color:#ccc;
+}
+
+.wrapper .error_message{
+    margin-bottom:20px;
+    padding:0px;
+    background-color:#ccc;
+    text-align:center;
+    font-size:14px;
+    transition:all 0.5s ease;           /* transition gives a smoother appearance */
+}

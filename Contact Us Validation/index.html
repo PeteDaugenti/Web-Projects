@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Us Form Validation with JavaScript</title>
+        <link rel="stylesheet" href="form.css">
+        <script src="form.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h2>Contact Us</h2>
+            <div id="error_message" class="error_message"></div>
+            <!--onsubmit attribute contains a return of validation method that will send data when submit is clicked-->
+            <form id="contact_form" onsubmit="return validation()">
+                <div class="input_field">
+                    <input type="text" id="name" placeholder="Name">
+                </div>                
+                <div class="input_field">
+                    <input type="text" id="subject" placeholder="Subject" maxlength="10">
+                </div>
+                <div class="input_field">
+                    <input type="text" id="phone" placeholder="Phone" inputmode="numeric" maxlength="10">
+                </div>
+                <div class="input_field">
+                    <input type="text" id="email" placeholder="Email">
+                </div>
+                <div class="input_field">
+                    <textarea id="message" placeholder="Message"></textarea>
+                </div>
+                <div class="btn">
+                    <input type="submit">
+                </div>
+            </form>
+
+            </div>
+        </div>
+
+    </body>
+</html>

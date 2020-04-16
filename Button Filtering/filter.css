@@ -1,0 +1,67 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+    font-family:"Mukta";
+    list-style:none;
+}
+
+body{
+    background-color:#f7f8fc;
+    color:#555;
+}
+
+.wrapper{
+    max-width:1000px;
+    width:100%;
+    margin:50px auto 0;
+}
+
+.button_grp ul{
+    display:flex;
+}
+
+.button_grp ul li{
+    background-color:#fff;
+    padding:10px 15px;
+    margin:10px;
+    border-radius:5px;
+    min-width:80px;         /* each button has min-width of 80px; each button has same width */
+    text-align:center;
+    cursor:pointer;
+    transition:all 0.2 ease;
+    box-shadow:1px 1px 3px rgba(0, 0, 0, 0.125);
+}
+
+.button_grp ul li.active,
+.button_grp ul li:hover{
+    background-color:#0000fe;
+    color:#fff;
+}
+
+.item_grp{
+    margin-top:50px;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.item_grp .item{
+    width:125px;
+    height:auto;
+    background-color:#fff;
+    margin:10px;
+    padding:15px;
+    border-radius:5px;
+    text-align:center;
+    box-shadow:1px 1px 3px rgba(0, 0, 0, 0.125);
+}
+
+.item_grp .item .icon_wrap{
+    height:85px;
+}
+
+.item_grp .item .icon{
+    display:inline-block;
+}

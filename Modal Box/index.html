@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Modal Box using jQuery</title>
+        <link rel="stylesheet" href="modal.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".modal_btn").click(function(){
+                    $(".modal_box").css("display", "block");
+                    $(".btn.btn_cancel, .modal_close").click(function(){
+                        $(".modal_box").css("display", "none");
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <div class="modal_btn">
+                Click here to open modal box
+            </div>
+            <div class="modal_box">
+                <div class="modal_bg_shadow"></div>
+                <div class="modal_box_wrap">
+                    <div class="modal_close"></div>
+                    <div class="modal_header">
+                        CSS Modal Box
+                    </div>
+                    <div class="modal_body">
+                        Content inside of modal box.  A short paragraph describing something will do.
+                    </div>
+                    <div class="modal_footer">
+                        <div class="modal_btn_grp">
+                            <div class="btn btn_cancel">Cancel</div>
+                            <div class="btn btn_confirm">Confirm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </body>
+</html>

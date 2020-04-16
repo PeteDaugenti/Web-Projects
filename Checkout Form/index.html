@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--This example page uses jQuery mask to format data entry-->
+        <title>Responsive Checkout Form with jQuery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="checkout.css">
+        <script src="https://kit.fontawesome.com/ad3264a647.js"></script> 
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="payment">
+                <div class="payment_logo">
+                    <p>P</p>
+                </div>
+                <h2>Payment Gateway</h2>
+
+                <div class="form">
+                    <div class="card space icon_relative">
+                        <label class="label">Card Holder: </label>
+                        <input type="text" class="input" name="card_holder" placeholder="John Smith">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="card space icon_relative">
+                        <label class="label">Card Number: </label>
+                        <input type="text" class="input" name="card_number" placeholder="Card Number" data-mask="0000 0000 0000 0000">
+                        <!--inputmode attribute sets keyboard type (in this case, numeric)-->
+                        <!--maxlength attribute prevents user from entering more than set number of digits; 19 if you include spaces/hyphens-->
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="card_grp space icon_relative">
+                        <div class="card_item">
+                            <label class="label">Expiration Date: </label>
+                            <input type="text" class="input" name="expiry_date" placeholder="00/00" data-mask="00/00">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="card_item icon_relative">
+                            <label class="label">CVC: </label>
+                            <input type="text" class="input" inputmode="numeric" name="cvc" maxlength="3" placeholder="000" data-mask="000">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                        Make Payment
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--jQuery Mask CDN-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    </body>
+</html>
